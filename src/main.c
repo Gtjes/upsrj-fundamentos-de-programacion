@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 float area (float side)
 {
    float a = side * side;
@@ -16,29 +15,31 @@ float volume (float side)
 }
 int main()
 {
+
    float side = 0;
+
+   printf (" Enter the side length:");
 
    if(scanf("%f", &side) != 1)
    {
-      printf(" Error the side must be a number\n");
 
+      printf("Error the side must be a number\n");
       return 1;
+
    }
-   if( side < 0 )
+
+   if(side < 0)
    {
-      printf("Errror the number cannot be negative\n");
 
+      printf("Error the side cannot be negative\n");
       return 1;
+
    }
 
-   printf (" Ententer the side length:");
-
-   scanf("%f", &side);
-   
    float a = area(side);
    float v = volume(side);
 
-   printf("square area: %f, volume: %f\n", a, v);
+   printf("square area: %.2f, volume: %.2f\n", a, v);
 
    return 0;
 }
