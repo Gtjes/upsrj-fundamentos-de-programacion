@@ -1,45 +1,36 @@
 #include <stdio.h>
 
-float area (float side)
+int is_even(int number)
 {
-   float a = side * side;
-   return a;
+if(number % 2 == 0)
+{
+return 1;
 }
-
-float volume (float side)
+else
 {
-
-   float v = side * side * side;
-   return v;
-
-}
-int main()
-{
-
-   float side = 0;
-
-   printf (" Enter the side length:");
-
-   if(scanf("%f", &side) != 1)
-   {
-
-      printf("Error the side must be a number\n");
-      return 1;
-
-   }
-
-   if(side < 0)
-   {
-
-      printf("Error the side cannot be negative\n");
-      return 1;
-
-   }
-
-   float a = area(side);
-   float v = volume(side);
-
-   printf("square area: %.2f, volume: %.2f\n", a, v);
-
    return 0;
+}
+
+}
+
+int main()
+
+{
+
+int number; 
+
+printf("Ingrese un numero: ");
+scanf("%d", &number);
+
+if(is_even(number))
+{
+   printf("El numero es par\n");
+}
+else
+{
+   printf("El numero es impar\n");
+}
+
+return 0;
+
 }
